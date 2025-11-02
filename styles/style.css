@@ -318,10 +318,6 @@
     grid-column: 2;
   }
 
-  .block__attention {
-    margin-block-end: 80px;
-  }
-
   .block__gallery {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
@@ -368,6 +364,7 @@
   .header {
     block-size: 768px;
     grid-template-rows: repeat(3, 2fr);
+    gap: 25px;
   }
 
   .header::before {
