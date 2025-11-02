@@ -184,6 +184,10 @@
   margin-block-end: 50px;
 }
 
+.block__hard-content {
+  text-wrap: balance;
+}
+
 .block__attention-title {
   block-size: 1fr;
   text-wrap: balance;
@@ -284,7 +288,6 @@
     inset-inline-start: 20px;
   }
 
-  .header,
   .block__gallery {
     margin-block-end: 60px;
   }
@@ -368,6 +371,11 @@
 @media (width >= 1024px) {
   .header {
     block-size: 768px;
+    grid-template-rows: repeat(3, 2fr);
+  }
+
+  .header::before {
+    inset-block-end: 0;
   }
 
   .header__theme-menu {
@@ -377,6 +385,14 @@
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .header__title {
+    align-self: center;
+  }
+
+  .header__content {
+    align-self: center;
   }
 
   .block__attention {
