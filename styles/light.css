@@ -13,12 +13,13 @@
   --block-title-color: #353430;
   --button-color: #353430;
   --color-title: #ffc2e6;
+  --main-bg: none;
   --subtitle-color: #353430;
   --button-hover-effect-color: rgba(50, 49, 45, 0.4);
   --bg-image: url("../images/cover-image-light.png");
   --content-text-color: #353430;
   --content-text-size: 18px;
-  --content-text-line-height: 25px;
+  --content-text-line-height: 1em;
   --visibility: hidden;
 }
 
