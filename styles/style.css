@@ -98,6 +98,7 @@
   align-self: end;
   text-align: left;
   justify-self: end;
+  margin-block-end: 0 !important;
 }
 
 .header__inscription {
@@ -181,6 +182,11 @@
   grid-template-columns: 1fr;
   gap: 20px;
   margin-block-end: 50px;
+}
+
+.block__attention-title {
+  block-size: 1fr;
+  text-wrap: balance;
 }
 
 .block__red-fish-first-subtitle {
