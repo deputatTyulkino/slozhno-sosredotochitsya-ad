@@ -8,25 +8,25 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding: 10px;
 }
 
 .header {
   position: relative;
-  min-block-size: 100vh;
+  block-size: 668px;
   font-family: IBM Plex Mono;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   margin-block-end: 40px;
+  padding: 10px;
 }
 
 .header::after {
   content: "";
   inline-size: 25px;
   block-size: 25px;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
   position: absolute;
   border-block-start: 1px solid var(--button-color);
   border-inline-end: 1px solid var(--button-color);
@@ -37,8 +37,8 @@
   inline-size: 25px;
   block-size: 25px;
   position: absolute;
-  inset-block-end: 0;
-  inset-inline-start: 0;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
   border-block-end: 1px solid var(--button-color);
   border-inline-start: 1px solid var(--button-color);
 }
@@ -104,6 +104,10 @@
   visibility: var(--visibility);
 }
 
+.main {
+  padding: 10px;
+}
+
 /*...............................*/
 
 .title-decor {
@@ -128,6 +132,7 @@
   font-size: var(--content-text-size);
   line-height: var(--content-text-line-height);
   color: var(--content-text-color);
+  text-wrap: balance;
 }
 
 .text-link {
@@ -152,8 +157,8 @@
   font-size: var(--content-text-size);
   line-height: var(--content-text-line-height);
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-end: 28px;
+  inset-block-start: 10px;
+  inset-inline-end: 38px;
 }
 
 .header__inscription::after {
@@ -165,8 +170,8 @@
   border: none;
   border-radius: 50%;
   position: absolute;
-  inset-block-start: 8px;
-  inset-inline-end: 9px;
+  inset-block-start: 18px;
+  inset-inline-end: 19px;
 }
 
 .block__hard,
@@ -217,6 +222,7 @@
   min-block-size: 100vh;
   display: grid;
   place-items: center;
+  padding: 10px;
 }
 
 .footer__title {
@@ -231,8 +237,8 @@
   content: "";
   inline-size: 25px;
   block-size: 25px;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
   position: absolute;
   border-block-start: 1px solid var(--button-color);
   border-inline-end: 1px solid var(--button-color);
@@ -243,16 +249,33 @@
   inline-size: 25px;
   block-size: 25px;
   position: absolute;
-  inset-block-end: 0;
-  inset-inline-start: 0;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
   border-block-end: 1px solid var(--button-color);
   border-inline-start: 1px solid var(--button-color);
 }
 
 /* MEDIA */
 @media (width >= 768px) {
-  .page {
+  .header,
+  .main,
+  .footer {
     padding: 20px;
+  }
+
+  .header {
+    grid-template-rows: repeat(4, 2fr);
+    block-size: 1024px;
+  }
+
+  .header::after {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .header::before {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
   }
 
   .header,
@@ -269,8 +292,14 @@
     inline-size: 50%;
   }
 
+  .header__inscription::after {
+    inset-block-start: 28px;
+    inset-inline-end: 29px;
+  }
+
   .header__inscription::before {
-    inset-inline-end: 28px;
+    inset-block-start: 20px;
+    inset-inline-end: 48px;
   }
 
   .block__hard,
@@ -318,11 +347,21 @@
   .fifth__image {
     grid-column: span 2;
   }
+
+  .footer::before {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+
+  .footer::after {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
 }
 
 @media (width >= 1024px) {
   .header {
-    min-block-size: 100vh;
+    block-size: 768px;
   }
 
   .header__theme-menu {
