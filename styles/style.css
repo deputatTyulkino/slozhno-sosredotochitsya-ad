@@ -438,4 +438,8 @@
   .block__red-fish {
     gap: 20px;
   }
+
+  .footer {
+    min-block-size: 768px;
+  }
 }
