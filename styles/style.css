@@ -355,7 +355,7 @@
   .block__gallery-grid {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, calc(0.5fr - 20px)) 1fr;
+    grid-template-rows: 192px 230px 318px;
   }
 
   .first__img {
@@ -440,7 +440,11 @@
     gap: 20px;
   }
 
-  .footer {
-    min-block-size: 95vh;
+  .block__gallery-grid {
+    grid-template-rows: 260px 315px 433px;
+  }
+
+  .footer__title {
+    margin-block-end: 40px;
   }
 }
